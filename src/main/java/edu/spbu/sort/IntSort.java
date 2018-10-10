@@ -9,7 +9,19 @@ import java.util.List;
  */
 public class IntSort {
   public static void sort (int array[]) {
-    Arrays.sort(array);
+
+    int i, c, r=1;
+    while (r!=0){
+      r=0;
+      for (i=0; i<array.length-1; i++)
+        if (array[i]>array[i+1]){
+          c=array[i];
+          array[i]=array[i+1];
+          array[i+1]=c;
+          r++;
+        }
+
+    }
   }
 
   public static void sort (List<Integer> list) {
